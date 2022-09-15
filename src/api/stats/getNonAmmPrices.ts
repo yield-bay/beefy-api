@@ -1,73 +1,73 @@
-import getBeltPrices from './bsc/belt/getBeltPrices';
-import getEllipsisPricesOld from './bsc/ellipsis/getEllipsisPricesOld';
-import { getEllipsisPrices } from './bsc/getEllipsisPrices';
-import getSnob3PoolPrice from './avax/getSnob3PoolPrice';
-import getFroyoPrices from './fantom/getFroyoPrices';
-import getGondolaPrices from './avax/getGondolaPrices';
-import getCurvePolygonPrices from './matic/getCurvePrices';
-import getCurveFantomPrices from './fantom/getCurvePrices';
-import getDopplePrices from './bsc/dopple/getDopplePrices';
-import { getIronSwapPrices } from './matic/getIronSwapPrices';
-import getAlpacaIbPrices from './bsc/alpaca/getAlpacaIbPrices';
-import getCurveArbitrumPrices from './arbitrum/getCurvePrices';
-import getCurveAvaxPrices from './avax/getCurvePrices';
-import getCurveHarmonyPrices from './one/getCurvePrices';
-import getCurveOptimismPrices from './optimism/getCurvePrices';
+// import getBeltPrices from './bsc/belt/getBeltPrices';
+// import getEllipsisPricesOld from './bsc/ellipsis/getEllipsisPricesOld';
+// import { getEllipsisPrices } from './bsc/getEllipsisPrices';
+// import getSnob3PoolPrice from './avax/getSnob3PoolPrice';
+// import getFroyoPrices from './fantom/getFroyoPrices';
+// import getGondolaPrices from './avax/getGondolaPrices';
+// import getCurvePolygonPrices from './matic/getCurvePrices';
+// import getCurveFantomPrices from './fantom/getCurvePrices';
+// import getDopplePrices from './bsc/dopple/getDopplePrices';
+// import { getIronSwapPrices } from './matic/getIronSwapPrices';
+// import getAlpacaIbPrices from './bsc/alpaca/getAlpacaIbPrices';
+// import getCurveArbitrumPrices from './arbitrum/getCurvePrices';
+// import getCurveAvaxPrices from './avax/getCurvePrices';
+// import getCurveHarmonyPrices from './one/getCurvePrices';
+// import getCurveOptimismPrices from './optimism/getCurvePrices';
 import getCurveMoonbeamPrices from './moonbeam/getCurvePrices';
-import getBeethovenxPrices from './fantom/getBeethovenxPrices';
-import { getSynapsePrices } from './avax/getSynapsePrices';
-import getJarvisPrices from './matic/getJarvisPrices';
+// import getBeethovenxPrices from './fantom/getBeethovenxPrices';
+// import { getSynapsePrices } from './avax/getSynapsePrices';
+// import getJarvisPrices from './matic/getJarvisPrices';
 import getSolarbeamPrices from './moonriver/getSolarbeamPrices';
-import getRosePrices from './aurora/getRosePrices';
+// import getRosePrices from './aurora/getRosePrices';
 import getStellaswapPrices from './moonbeam/getStellaswapPrices';
-import getBeetsOPPrices from './optimism/getBeetsOPPrices';
-import getBalancerArbPrices from './arbitrum/getBalancerArbPrices';
-import getBalancerPolyPrices from './matic/getBalancerPolyPrices';
-import getVelodromeStablePrices from './optimism/getVelodromeStablePrices';
-import getDystopiaStablePrices from './matic/getDystopiaStablePrices';
-import getSolidlyV1StablePrices from './fantom/getSolidlyV1StablePrices';
-import getVoltagePrices from './fuse/getVoltagePrices';
+// import getBeetsOPPrices from './optimism/getBeetsOPPrices';
+// import getBalancerArbPrices from './arbitrum/getBalancerArbPrices';
+// import getBalancerPolyPrices from './matic/getBalancerPolyPrices';
+// import getVelodromeStablePrices from './optimism/getVelodromeStablePrices';
+// import getDystopiaStablePrices from './matic/getDystopiaStablePrices';
+// import getSolidlyV1StablePrices from './fantom/getSolidlyV1StablePrices';
+// import getVoltagePrices from './fuse/getVoltagePrices';
 import getBeamswapPrices from './moonbeam/getBeamswapPrices';
-import getTrisolarisPrices from './aurora/getTrisolarisPrices';
-import getConeStablePrices from './bsc/getConeStablePrices';
-import getSpiritStablePrices from './fantom/getSpiritStablePrices';
+// import getTrisolarisPrices from './aurora/getTrisolarisPrices';
+// import getConeStablePrices from './bsc/getConeStablePrices';
+// import getSpiritStablePrices from './fantom/getSpiritStablePrices';
 
 const getNonAmmPrices = async tokenPrices => {
   let prices = {};
   let breakdown = {};
 
   const promises = [
-    getSpiritStablePrices(tokenPrices),
-    getConeStablePrices(tokenPrices),
-    getTrisolarisPrices(tokenPrices),
+    // getSpiritStablePrices(tokenPrices),
+    // getConeStablePrices(tokenPrices),
+    // getTrisolarisPrices(tokenPrices),
     getBeamswapPrices(tokenPrices),
-    getVoltagePrices(tokenPrices),
-    getSolidlyV1StablePrices(tokenPrices),
-    getDystopiaStablePrices(tokenPrices),
-    getVelodromeStablePrices(tokenPrices),
-    getBalancerPolyPrices(tokenPrices),
-    getBalancerArbPrices(tokenPrices),
-    getBeethovenxPrices(tokenPrices),
-    getBeetsOPPrices(tokenPrices),
-    getBeltPrices(tokenPrices),
-    getEllipsisPricesOld(),
-    getEllipsisPrices(tokenPrices),
-    getSnob3PoolPrice(),
-    getFroyoPrices(),
-    getGondolaPrices(tokenPrices),
-    getCurvePolygonPrices(tokenPrices),
-    getCurveFantomPrices(tokenPrices),
-    getCurveArbitrumPrices(tokenPrices),
-    getCurveAvaxPrices(tokenPrices),
-    getCurveHarmonyPrices(tokenPrices),
-    getCurveOptimismPrices(tokenPrices),
+    // getVoltagePrices(tokenPrices),
+    // getSolidlyV1StablePrices(tokenPrices),
+    // getDystopiaStablePrices(tokenPrices),
+    // getVelodromeStablePrices(tokenPrices),
+    // getBalancerPolyPrices(tokenPrices),
+    // getBalancerArbPrices(tokenPrices),
+    // getBeethovenxPrices(tokenPrices),
+    // getBeetsOPPrices(tokenPrices),
+    // getBeltPrices(tokenPrices),
+    // getEllipsisPricesOld(),
+    // getEllipsisPrices(tokenPrices),
+    // getSnob3PoolPrice(),
+    // getFroyoPrices(),
+    // getGondolaPrices(tokenPrices),
+    // getCurvePolygonPrices(tokenPrices),
+    // getCurveFantomPrices(tokenPrices),
+    // getCurveArbitrumPrices(tokenPrices),
+    // getCurveAvaxPrices(tokenPrices),
+    // getCurveHarmonyPrices(tokenPrices),
+    // getCurveOptimismPrices(tokenPrices),
     getCurveMoonbeamPrices(tokenPrices),
-    getRosePrices(tokenPrices),
-    getDopplePrices(),
-    getIronSwapPrices(),
-    getAlpacaIbPrices(tokenPrices),
-    getSynapsePrices(),
-    getJarvisPrices(tokenPrices),
+    // getRosePrices(tokenPrices),
+    // getDopplePrices(),
+    // getIronSwapPrices(),
+    // getAlpacaIbPrices(tokenPrices),
+    // getSynapsePrices(),
+    // getJarvisPrices(tokenPrices),
     getSolarbeamPrices(tokenPrices),
     getStellaswapPrices(tokenPrices),
   ];

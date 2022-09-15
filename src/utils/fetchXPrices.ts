@@ -14,34 +14,34 @@ import { addressBook } from '../../packages/address-book/address-book';
 import { getContract } from './contractHelper';
 
 const {
-  fantom: {
-    tokens: { BOO, xBOO, SCREAM, xSCREAM, CREDIT, xCREDIT, FTM, sFTMx },
-  },
-  polygon: {
-    tokens: { QUICK, dQUICK },
-  },
-  fuse: {
-    tokens: { VOLT, xVOLT },
-  },
+  // fantom: {
+  //   tokens: { BOO, xBOO, SCREAM, xSCREAM, CREDIT, xCREDIT, FTM, sFTMx },
+  // },
+  // polygon: {
+  //   tokens: { QUICK, dQUICK },
+  // },
+  // fuse: {
+  //   tokens: { VOLT, xVOLT },
+  // },
   moonbeam: {
     tokens: { STELLA, xSTELLA },
   },
-  aurora: {
-    tokens: { TRI, xTRI },
-  },
+  // aurora: {
+  //   tokens: { TRI, xTRI },
+  // },
 } = addressBook;
 
 const tokens = {
-  fantom: [
-    [BOO, xBOO],
-    [SCREAM, xSCREAM],
-    [CREDIT, xCREDIT],
-    [FTM, sFTMx],
-  ],
-  polygon: [[QUICK, dQUICK]],
-  fuse: [[VOLT, xVOLT]],
+  // fantom: [
+  //   [BOO, xBOO],
+  //   [SCREAM, xSCREAM],
+  //   [CREDIT, xCREDIT],
+  //   [FTM, sFTMx],
+  // ],
+  // polygon: [[QUICK, dQUICK]],
+  // fuse: [[VOLT, xVOLT]],
   moonbeam: [[STELLA, xSTELLA]],
-  aurora: [[TRI, xTRI]],
+  // aurora: [[TRI, xTRI]],
 };
 
 const getXPrices = async (tokenPrices, tokens, chainId) => {
@@ -79,11 +79,11 @@ const getXPrices = async (tokenPrices, tokens, chainId) => {
 
 const fetchXPrices = async tokenPrices =>
   Promise.all([
-    getXPrices(tokenPrices, tokens.fantom, FANTOM_CHAIN_ID),
-    getXPrices(tokenPrices, tokens.polygon, POLYGON_CHAIN_ID),
-    getXPrices(tokenPrices, tokens.fuse, FUSE_CHAIN_ID),
+    // getXPrices(tokenPrices, tokens.fantom, FANTOM_CHAIN_ID),
+    // getXPrices(tokenPrices, tokens.polygon, POLYGON_CHAIN_ID),
+    // getXPrices(tokenPrices, tokens.fuse, FUSE_CHAIN_ID),
     getXPrices(tokenPrices, tokens.moonbeam, MOONBEAM_CHAIN_ID),
-    getXPrices(tokenPrices, tokens.aurora, AURORA_CHAIN_ID),
+    // getXPrices(tokenPrices, tokens.aurora, AURORA_CHAIN_ID),
   ]).then(data =>
     data
       .flat()
